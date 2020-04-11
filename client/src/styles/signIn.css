@@ -1,0 +1,39 @@
+.container {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    left: 361px;
+    top: 150px;
+    background: #4B4545;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+}
+
+label {
+    color: #ffffff;
+}
+
+h4 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.buttons {
+    color: red;
+    opacity: 1;
+}
+
+.button1 {
+    width: 150px;
+    height: auto;
+    background: #000000;
+    border-radius: 10px;
+}
+
+.button2 {
+    width: 150px;
+    height: auto;
+    margin-left: 150px;
+    background: #000000;
+    border-radius: 10px;
+}

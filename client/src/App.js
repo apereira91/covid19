@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
@@ -15,6 +16,25 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 
 import "./App.css";
+=======
+import React from 'react';
+import Signup from './components/signUp';
+import Signin from './components/signIn';
+import Navbar from './components/dropdown'
+import "./App.css";
+
+function App() {
+  return (
+    <div>
+      <h1 style= {{ color: "white" }}>COVID 19</h1>
+      <div>
+        <Signin />
+      </div>
+    </div>
+
+  );
+}
+>>>>>>> master
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
