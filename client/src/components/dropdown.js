@@ -5,15 +5,14 @@ import { logoutUser } from "../actions/authActions";
 
 function dropdown() {
     return (
-        <div class="dropdown">
-            <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div className="dropdown">
+            <a className="btn btn-primary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dashboard </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Symptoms</a>
-                <a class="dropdown-item" href="#">Check-Ins</a>
-                <a class="dropdown-item" href="#">Logout</a>
-            </div>
+                <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a className="dropdown-item" href="/symptoms">Symptoms</a>
+                    <a className="dropdown-item" href="/checkins">Check-Ins</a>
+                    <a className="dropdown-item" href="/logout">Logout</a>
+                </div>
         </div>
     )
 }
