@@ -1,6 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../actions/authActions";
 
-function Navbar() {
+function dropdown() {
     return (
         <div className="dropdown">
             <a className="btn btn-primary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -14,4 +17,16 @@ function Navbar() {
     )
 }
 
-export default Navbar;
+dropdown.propTypes = {
+    logoutUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+
+export default connect(
+    mapStateToProps,
+    { logoutUser }
+)(dropdown);

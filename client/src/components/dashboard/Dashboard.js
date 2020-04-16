@@ -27,7 +27,6 @@ class Dashboard extends Component {
         <div className="row">
           <div className="landing-copy col s12 center-align">
             <h4>
-              <b>Hey there,</b> {user.name.split(" ")[0]}
               <p className="flow-text grey-text text-darken-1">
                 You are logged into the Dashboard of {" "}
                 <span style={{ fontFamily: "monospace" }}>CORONAVIRUS</span> tracker 👏
@@ -69,7 +68,7 @@ class Dashboard extends Component {
             <Navbar />
           </div>
         </div>
-      </div>
+      </div>                                      
     );
   }
 }
