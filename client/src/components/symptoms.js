@@ -8,29 +8,29 @@ const Symptoms = () => (
         <div className="symptomMain">
             <h4>SYMPTOMS</h4>
             <p>Select the symptom you may be experiencing: </p>
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Dry cough</label>
+            <div className="custom-control custom-checkbox">
+                <input type="checkbox" className="custom-control-input" id="customCheck1">
+                    <label className="custom-control-label" for="customCheck1">Dry cough</label>
                 </input>
             </div>
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                    <label class="custom-control-label" for="customCheck2">Fever</label>
+            <div className="custom-control custom-checkbox">
+                <input type="checkbox" className="custom-control-input" id="customCheck2">
+                    <label className="custom-control-label" for="customCheck2">Fever</label>
                 </input>
             </div>
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck3">
-                    <label class="custom-control-label" for="customCheck3">Tiredness</label>
+            <div className="custom-control custom-checkbox">
+                <input type="checkbox" className="custom-control-input" id="customCheck3">
+                    <label className="custom-control-label" for="customCheck3">Tiredness</label>
                 </input>
             </div>
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                    <label class="custom-control-label" for="customCheck4">Loss of smell or taste</label>
+            <div className="custom-control custom-checkbox">
+                <input type="checkbox" className="custom-control-input" id="customCheck4">
+                    <label className="custom-control-label" for="customCheck4">Loss of smell or taste</label>
                 </input>
             </div>
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                    <label class="custom-control-label" for="customCheck4">Difficulty breathing</label>
+            <div className="custom-control custom-checkbox">
+                <input type="checkbox" className="custom-control-input" id="customCheck4">
+                    <label className="custom-control-label" for="customCheck4">Difficulty breathing</label>
                 </input>
             </div>
 

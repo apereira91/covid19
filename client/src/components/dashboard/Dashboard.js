@@ -2,12 +2,22 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import "./dashboard.css";
+import Navbar from "../dropdown";
+import axios from "axios";
 
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
     this.props.logoutUser();
   };
+
+  componentDidMount() {
+    axios.get(`https://api.covid19api.com/summary`).then(res => {
+      console.log(res.data);
+      this.setState({ world: res.data });
+    });
+  }
 
   render() {
     const { user } = this.props.auth;
@@ -19,10 +29,31 @@ class Dashboard extends Component {
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
               <p className="flow-text grey-text text-darken-1">
-                You are logged into a full-stack{" "}
-                <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
+                You are logged into the Dashboard of {" "}
+                <span style={{ fontFamily: "monospace" }}>CORONAVIRUS</span> tracker 👏
               </p>
             </h4>
+            <div className="card text-white bg-primary mb-3 dataCards">
+              <div className="card-header"> Confirmed </div>
+              <div className="card-body">
+                <h5 className="card-title"></h5>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div className="card text-white bg-primary mb-3 dataCards">
+              <div className="card-header"> Deaths </div>
+              <div className="card-body">
+                <h5 className="card-title"></h5>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div className="card text-white bg-primary mb-3 dataCards">
+              <div className="card-header"> Recovered </div>
+              <div className="card-body">
+                <h5 className="card-title"></h5>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
             <button
               style={{
                 width: "150px",
@@ -35,6 +66,7 @@ class Dashboard extends Component {
             >
               Logout
             </button>
+            <Navbar />
           </div>
         </div>
       </div>
