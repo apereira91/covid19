@@ -12,15 +12,18 @@ class Dashboard extends Component {
     this.props.logoutUser();
   };
 
+  state = {world: null};
+
   componentDidMount() {
     axios.get(`https://api.covid19api.com/summary`).then(res => {
       console.log(res.data);
-      this.setState({ world: res.data });
+      this.setState({ world: res.data }, console.log(this.state));
+      console.log(this.state.world.Global.TotalConfirmed);
     });
   }
 
   render() {
-    const { user } = this.props.auth;
+    console.log(this.state.world);
 
     return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
@@ -35,22 +38,19 @@ class Dashboard extends Component {
             <div className="card text-white bg-primary mb-3 dataCards">
               <div className="card-header"> Confirmed </div>
               <div className="card-body">
-                <h5 className="card-title"></h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p className="card-text"> {this.state.world && this.state.world.Global.TotalConfirmed} </p>
               </div>
             </div>
             <div className="card text-white bg-primary mb-3 dataCards">
               <div className="card-header"> Deaths </div>
               <div className="card-body">
-                <h5 className="card-title"></h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p className="card-text"> {this.state.world && this.state.world.Global.TotalDeaths} </p>
               </div>
             </div>
             <div className="card text-white bg-primary mb-3 dataCards">
               <div className="card-header"> Recovered </div>
               <div className="card-body">
-                <h5 className="card-title"></h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p className="card-text"> {this.state.world && this.state.world.Global.TotalRecovered} </p>
               </div>
             </div>
             <button
