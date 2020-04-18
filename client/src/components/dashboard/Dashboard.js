@@ -46,7 +46,7 @@ class Dashboard extends Component {
                 </div>
               </div>
               <div className="col-sm-4">
-                <div className="card text-white bg-primary mb-3 dataCards">
+                <div className="card text-white bg-danger mb-3 dataCards">
                   <div className="card-header"> Deaths </div>
                   <div className="card-body">
                     <p className="card-text"> {this.state.world && this.state.world.Global.TotalDeaths} </p>
@@ -54,7 +54,7 @@ class Dashboard extends Component {
                 </div>
               </div>
               <div className="col-sm-4">
-                <div className="card text-white bg-primary mb-3 dataCards">
+                <div className="card text-white bg-success mb-3 dataCards">
                   <div className="card-header"> Recovered </div>
                   <div className="card-body">
                     <p className="card-text"> {this.state.world && this.state.world.Global.TotalRecovered} </p>
