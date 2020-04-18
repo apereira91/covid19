@@ -26,7 +26,8 @@ class Dashboard extends Component {
     console.log(this.state.world);
 
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
+      <div style={{ height: "75vh" }} className="container-fluid">
+        <Navbar />
         <div className="row">
           <div className="landing-copy col s12 center-align">
             <h4>
@@ -35,22 +36,30 @@ class Dashboard extends Component {
                 <span style={{ fontFamily: "monospace" }}>CORONAVIRUS</span> tracker 👏
               </p>
             </h4>
-            <div className="card text-white bg-primary mb-3 dataCards">
-              <div className="card-header"> Confirmed </div>
-              <div className="card-body">
-                <p className="card-text"> {this.state.world && this.state.world.Global.TotalConfirmed} </p>
+            <div className="row">
+              <div className="col-sm-4">
+                <div className="card text-white bg-primary mb-3 dataCards">
+                  <div className="card-header"> Confirmed </div>
+                  <div className="card-body">
+                    <p className="card-text"> {this.state.world && this.state.world.Global.TotalConfirmed} </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="card text-white bg-primary mb-3 dataCards">
-              <div className="card-header"> Deaths </div>
-              <div className="card-body">
-                <p className="card-text"> {this.state.world && this.state.world.Global.TotalDeaths} </p>
+              <div className="col-sm-4">
+                <div className="card text-white bg-primary mb-3 dataCards">
+                  <div className="card-header"> Deaths </div>
+                  <div className="card-body">
+                    <p className="card-text"> {this.state.world && this.state.world.Global.TotalDeaths} </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="card text-white bg-primary mb-3 dataCards">
-              <div className="card-header"> Recovered </div>
-              <div className="card-body">
-                <p className="card-text"> {this.state.world && this.state.world.Global.TotalRecovered} </p>
+              <div className="col-sm-4">
+                <div className="card text-white bg-primary mb-3 dataCards">
+                  <div className="card-header"> Recovered </div>
+                  <div className="card-body">
+                    <p className="card-text"> {this.state.world && this.state.world.Global.TotalRecovered} </p>
+                  </div>
+                </div>
               </div>
             </div>
             <button
@@ -65,7 +74,6 @@ class Dashboard extends Component {
             >
               Logout
             </button>
-            <Navbar />
           </div>
         </div>
       </div>                                      
