@@ -11,7 +11,7 @@ class Dashboard extends Component {
     e.preventDefault();
     this.props.logoutUser();
   };
-
+  
   state = {world: null};
 
   componentDidMount() {
@@ -23,6 +23,8 @@ class Dashboard extends Component {
   }
 
   render() {
+    const { user } = this.props.auth;
+
     console.log(this.state.world);
 
     return (
