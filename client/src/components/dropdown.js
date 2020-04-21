@@ -1,20 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../actions/authActions";
 
-function dropdown() {
-    return (
+class dropdown extends Component {
+    onLogoutClick = e => {
+      e.preventDefault();
+      this.props.logoutUser();
+    };
+
+    render() {
+        return (
         <div className="dropdown">
             <a className="btn btn-primary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dashboard </a>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a className="dropdown-item" href="/symptoms">Symptoms</a>
                     <a className="dropdown-item" href="/checkins">Check-Ins</a>
-                    <a className="dropdown-item" href="/logout">Logout</a>
+                    <a className="dropdown-item" href="/logout"  onClick={this.onLogoutClick}>Logout</a>
                 </div>
         </div>
-    )
+        )
+    }
 }
 
 dropdown.propTypes = {
