@@ -1,9 +1,12 @@
 import React from "react";
 import "../styles/symptoms.css";
+import Navbar from "./dropdown";
 
 const Symptoms = () => (
     <div className="container">
-        <div className="symptomMain">
+        <Navbar />
+
+        <div className="symptomMain text-center">
             <h4>SYMPTOMS</h4>
             <p>Select the symptom you may be experiencing: </p>
             <div className="custom-control custom-checkbox">
@@ -31,11 +34,13 @@ const Symptoms = () => (
                 <label className="custom-control-label" for="customCheck4">Loss of smell or taste</label>
             </div>
             <div className="custom-control custom-checkbox">
-                <input type="checkbox" className="custom-control-input" id="customCheck4">
+                <input type="checkbox" className="custom-control-input" id="customCheck5">
                     
                 </input>
-                <label className="custom-control-label" for="customCheck4">Difficulty breathing</label>
+                <label className="custom-control-label" for="customCheck5">Difficulty breathing</label>
             </div>
+
+            <br></br>
 
             <p>To get medically diagnosed, visit https://relymd.com </p>
         </div>
