@@ -1,9 +1,6 @@
 import React from "react";
 // import ReactDOM from "react-dom";
-import { geolocated } from "react-geolocated";
-// import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-import Geoloc from "./Geoloc"
 
 class checkInButton extends React.Component {
     constructor(props) {
@@ -13,9 +10,10 @@ class checkInButton extends React.Component {
         this.handleClick= this.handleClick.bind(this);
     }
 
+
     // componentDidMount() {
     //     navigator.geolocation.getCurrentPosition(function(position) {
-    //         console.log("Latitude is:", position.coords.latitude);
+    //         console.log("Latitude is:", pos ition.coords.latitude);
     //         console.log("Longitude is :", position.coords.longitude);
     //         // this.setState({ position:{ longitude: position.coords.longitude, latitude: position.coords.latitude} })
     //     });
@@ -26,6 +24,7 @@ class checkInButton extends React.Component {
             console.log("Latitude is:", position.coords.latitude);
             console.log("Longitude is :", position.coords.longitude);
     })
+        console.log(this.props.id);
 }
 
     render() {
