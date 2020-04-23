@@ -5,6 +5,8 @@ import { logoutUser } from "../../actions/authActions";
 import "./dashboard.css";
 import Navbar from "../dropdown";
 import axios from "axios";
+import CheckInButton from "./checkInButton";
+
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -16,9 +18,7 @@ class Dashboard extends Component {
 
   componentDidMount() {
     axios.get(`https://api.covid19api.com/summary`).then(res => {
-      console.log(res.data);
-      this.setState({ world: res.data }, console.log(this.state));
-      console.log(this.state.world.Global.TotalConfirmed);
+      this.setState({ world: res.data });
     });
   }
 
@@ -38,6 +38,7 @@ class Dashboard extends Component {
                 <span style={{ fontFamily: "monospace" }}>CORONAVIRUS</span> tracker 👏
               </p>
             </h4>
+            <CheckInButton />
             <div className="row">
               <div className="col-sm-4">
                 <div className="card text-white bg-primary mb-3 dataCards">
