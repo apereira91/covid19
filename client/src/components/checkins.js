@@ -1,54 +1,50 @@
 import React from "react";
-import Navbar from "./dropdown";
-import "../styles/checkins.css";
+import Layout from "../components/Layout";
+import Iframe from "react-iframe";
 
-const Checkins = () => (
-    <div className="container">
-        <Navbar />
-        <div className="checkinMain">
-            <h4>CHECK-INS</h4>
-            <div className="row">
-                <div className="col-sm-6">
-                    <div className="card">
-                        <div className="card-body">
-                            <h5 className="card-title">Place #1</h5>
-                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" className="btn btn-danger">Remove from Check-Ins</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-sm-6">
-                    <div className="card">
-                        <div className="card-body">
-                            <h5 className="card-title">Place #2</h5>
-                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" className="btn btn-danger">Remove from Check-Ins</a>
-                        </div>
-                    </div>
-                </div>
+export const AppointmentsPageTemplate = () => {
+  return (
+    <section className="section section--gradient">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <div className="section">
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                Check-in
+              </h2>
+              <p>
+                If you have tested positive, please check-in with your current
+                location so we can help prevent the spread of COVID-19. If you
+                have not yet been tested, follow the link to relyMD.
+              </p>
+              <a
+                className="button"
+                href="https://relymd.com/coronavirus-2019/"
+                style={{ marginTop: 20, marginBottom: 20 }}
+              >
+                Check-in
+              </a>
+              <Iframe
+                url="https://calendar.google.com/calendar/embed?height=800&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=Z2FpdGtlZXBlcjEzQGdtYWlsLmNvbQ&amp;src=aTBpMjQ2M3EzY2xrM2RqMHRvczc3bjF0OTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;color=%23F6BF26&amp;color=%2333B679&amp;color=%230B8043"
+                styles={{ borderWidth: 0 }}
+                frameborder="0"
+                height="800"
+                width="100%"
+              />
             </div>
-            <div className="row">
-                <div className="col-sm-6">
-                    <div className="card">
-                        <div className="card-body">
-                            <h5 className="card-title">Place #3</h5>
-                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" className="btn btn-danger">Remove from Check-Ins</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-sm-6">
-                    <div className="card">
-                        <div className="card-body">
-                            <h5 className="card-title">Place #4</h5>
-                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" className="btn btn-danger">Remove from Check-Ins</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-);
+      </div>
+    </section>
+  );
+};
 
-export default Checkins;
+const AppointmentsPage = () => {
+  return (
+    <Layout>
+      <AppointmentsPageTemplate />
+    </Layout>
+  );
+};
+
+export default AppointmentsPage;
