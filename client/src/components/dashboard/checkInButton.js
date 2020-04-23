@@ -21,10 +21,12 @@ class checkInButton extends React.Component {
 
      handleClick() {
         navigator.geolocation.getCurrentPosition(function(position) {
-            console.log("Latitude is:", position.coords.latitude);
-            console.log("Longitude is :", position.coords.longitude);
+           const checkIn = {
+                longitude: position.coords.longitude,
+                latitude: position.coords.latitude
+            };
     })
-        console.log(this.props.id);
+        //console.log(this.props.id) Current User ID;
 }
 
     render() {

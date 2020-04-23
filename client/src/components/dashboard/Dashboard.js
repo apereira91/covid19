@@ -38,6 +38,8 @@ class Dashboard extends Component {
                 <span style={{ fontFamily: "monospace" }}>CORONAVIRUS</span> tracker 👏
               </p>
             </h4>
+            <CheckInButton />
+            <br></br>
             <div className="row">
               <div className="col-sm-4">
                 <div className="card text-white bg-primary mb-3 dataCards">
