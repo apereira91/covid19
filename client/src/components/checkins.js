@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./dropdown";
+import "../styles/checkins.css";
 
 const Checkins = () => (
     <div className="container">
