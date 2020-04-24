@@ -1,13 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const keys = require("../../config/keys");
-const passport = require("passport");
 
 // Load User model
-const User = require("../../models/user");
+const db = require("../../models/index");
 
-router.post("/api/checkins", (req, res) => {
-    
-})
+router.post("/", (req, res) => {
+    db.Check.create(req.body).then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+});
+
+module.exports = router;
