@@ -14,7 +14,10 @@ const UserSchema = new Schema({
   date: {
     type: Date, 
     default: Date.now
-  }
+  },
+  checks: [
+    {type: mongoose.Schema.Types.ObjectId, ref:'Check'}
+  ]
 });
 
 const User = mongoose.model("users", UserSchema);
