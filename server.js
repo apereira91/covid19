@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const bodyParser = require("body-parser")
-const users = require("./routes/api/users");
 const path = require("path");
+const routes = require("./routes");
 
 app.use(
   bodyParser.urlencoded({
@@ -39,7 +39,7 @@ mongoose
   app.use(passport.initialize());
   require("./config/passport")(passport);
 
-  app.use("/api/users", users);
+  app.use(routes);
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);

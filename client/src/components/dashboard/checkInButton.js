@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 // import ReactDOM from "react-dom";
 
 
@@ -20,13 +21,21 @@ class checkInButton extends React.Component {
     // } 
 
      handleClick() {
+         const id = this.props.id;
         navigator.geolocation.getCurrentPosition(function(position) {
-           const checkIn = {
+            console.log("Latitude is:", position.coords.latitude);
+            console.log("Longitude is :", position.coords.longitude);
+            const checkData = {
                 longitude: position.coords.longitude,
-                latitude: position.coords.latitude
-            };
+                latitude: position.coords.latitude,
+                user: id
+            }
+            console.log(checkData);
+            axios.post("/api/checks", checkData);
+
     })
-        console.log(this.props.id);
+    
+
 }
 
     render() {
