@@ -30,7 +30,7 @@ class checkInButton extends React.Component {
     render() {
         return (
             <div>
-                <button onClick= {this.handleClick}>CHECK-IN</button>
+                <button type="button" className="btn btn-primary" onClick= {this.handleClick}>CHECK-IN</button>
             </div>
         );
     }
