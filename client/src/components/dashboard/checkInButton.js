@@ -26,7 +26,7 @@ class checkInButton extends React.Component {
                 latitude: position.coords.latitude
             };
     })
-        //console.log(this.props.id) Current User ID;
+        console.log(this.props.id);
 }
 
     render() {
