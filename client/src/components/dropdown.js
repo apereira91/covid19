@@ -12,7 +12,7 @@ class dropdown extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-light bg-light nav justify-content-end">
+                <nav className="navbar navbar-light bg-dark nav justify-content-end">
                     <form className="form-inline">
                         <button className="btn btn-outline-primary" type="button" href="/logout" onClick={this.onLogoutClick}>Logout</button>
                     </form>
