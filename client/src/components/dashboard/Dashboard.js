@@ -39,10 +39,10 @@ class Dashboard extends Component {
                 COVID Tracker
             </h3>
             <div className="button">
-              <div className="col s3 left-align">
+              <div className="d-inline col s6">
                 <CheckInButton {...user}/>
               </div>
-              <div className="col s3 left-align">
+              <div className="d-inline col s6">
                 <InfectedButton {...user}/>
               </div>
             </div>

@@ -8,9 +8,14 @@ What the App will do?
 What technologies will the app implement?
 - React, Node, Express, MySQL, Bootstrap, Passport 
 
+New NPM Packages used
+- Passport-jwt, nodemailer, and geolocated
+
 Who will be responsible for each part of deliverable #1
 01 Overview - Alysia
 02 Design Layouts - Jack
 03 Roles - Raymond
 04 Tasks - Jack
 05 Screenshot - Raymond
+
+
