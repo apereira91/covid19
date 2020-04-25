@@ -65,7 +65,9 @@ class infectedButton extends React.Component {
                 const lastFilterArray = [...uniqueSetTwo];
                 console.log(lastFilterArray);
                 for (let t = 0; t < lastFilterArray.length; t++) {
-            
+                    let emailObj = {email: lastFilterArray[t].email,
+                        date: lastFilterArray[t].date};
+        axios.post('/api/email/send', emailObj);
                 }
 
             

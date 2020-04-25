@@ -1,5 +1,25 @@
 const express = require("express");
 const router = express.Router();
+const nodemailer = require("nodemailer");
+const creds = require("../../config/email");
+
+var transport = {
+  host: 'smtp.gmail.com',
+  auth: {
+    user: creds.USER,
+    pass: creds.PASS
+  }
+}
+
+var transporter = nodemailer.createTransport(transport)
+
+transporter.verify((error, success) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("All works fine!");
+  }
+});
 
 
 router.post('/send', (req, res, next) => {
@@ -27,3 +47,5 @@ router.post('/send', (req, res, next) => {
       }
     })
   })
+
+  module.exports = router;
