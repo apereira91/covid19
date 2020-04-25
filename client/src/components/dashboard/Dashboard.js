@@ -6,7 +6,8 @@ import "./dashboard.css";
 import Navbar from "../dropdown";
 import axios from "axios";
 import CheckInButton from "./checkInButton";
-//import InfectedButton from "./infectedButton";
+import InfectedButton from "./infectedButton";
+
 
 
 class Dashboard extends Component {
@@ -33,6 +34,7 @@ class Dashboard extends Component {
         <Navbar />
         <div className="row">
           <div className="landing-copy col s12 center-align">
+
             <h3 className="text-center text-white">
                 COVID Tracker
             </h3>
@@ -40,9 +42,9 @@ class Dashboard extends Component {
               <div className="col s3 left-align">
                 <CheckInButton {...user}/>
               </div>
-              {/* <div className="col s3 left-align">
-                <InfectedButton />
-              </div> */}
+              <div className="col s3 left-align">
+                <InfectedButton {...user}/>
+              </div>
             </div>
             <br></br>
             <div className="row bg-dark">

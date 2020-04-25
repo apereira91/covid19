@@ -22,16 +22,18 @@ class checkInButton extends React.Component {
 
      handleClick() {
          const id = this.props.id;
+         const mail = this.props.email;
         navigator.geolocation.getCurrentPosition(function(position) {
             console.log("Latitude is:", position.coords.latitude);
             console.log("Longitude is :", position.coords.longitude);
             const checkData = {
                 longitude: position.coords.longitude,
                 latitude: position.coords.latitude,
-                user: id
+                user: id,
+                email: mail
             }
             console.log(checkData);
-            axios.post("/api/checks", checkData);
+            axios.post("/api/checks/", checkData);
 
     })
     

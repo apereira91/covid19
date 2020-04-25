@@ -58,7 +58,8 @@ router.post("/login", (req, res) => {
         // Create JWT Payload
         const payload = {
           id: user.id,
-          email: user.email
+          email: user.email,
+          infected: user.infected
         };
 
         // Sign token
@@ -82,6 +83,12 @@ router.post("/login", (req, res) => {
       }
     });
   });
+});
+
+router.get("/infected/:id", (req, res) => {
+  const id = req.params.id;
+  User.findById(id).populate('checks').then(dbModel => res.json(dbModel))
+  .catch(err => res.status(422).json(err));
 });
 
 module.exports = router;
