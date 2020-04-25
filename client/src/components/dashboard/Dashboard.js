@@ -9,6 +9,7 @@ import CheckInButton from "./checkInButton";
 import InfectedButton from "./infectedButton";
 
 
+
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
@@ -29,41 +30,45 @@ class Dashboard extends Component {
     console.log(this.state.world);
 
     return (
-      <div style={{ height: "75vh" }} className="container-fluid">
+      <div style={{ height: "75vh" }} className="container bg-dark">
         <Navbar />
         <div className="row">
           <div className="landing-copy col s12 center-align">
-            <h4>
-              <p className="flow-text grey-text text-darken-1">
-                You are logged into the Dashboard of {" "}
-                <span style={{ fontFamily: "monospace" }}>CORONAVIRUS</span> tracker 👏
-              </p>
-            </h4>
-            <InfectedButton {...user}/>
-            <CheckInButton {...user}/>
+
+            <h3 className="text-center text-white">
+                COVID Tracker
+            </h3>
+            <div className="button">
+              <div className="col s3 left-align">
+                <CheckInButton {...user}/>
+              </div>
+              <div className="col s3 left-align">
+                <InfectedButton {...user}/>
+              </div>
+            </div>
             <br></br>
-            <div className="row">
+            <div className="row bg-dark">
               <div className="col-sm-4">
                 <div className="card text-white bg-primary mb-3 dataCards">
-                  <div className="card-header"> Confirmed </div>
+                  <div className="card-header text-center font-italic"> Confirmed </div>
                   <div className="card-body">
-                    <p className="card-text"> {this.state.world && this.state.world.Global.TotalConfirmed} </p>
+                    <p className="card-text text-center"> {this.state.world && this.state.world.Global.TotalConfirmed} </p>
                   </div>
                 </div>
               </div>
               <div className="col-sm-4">
                 <div className="card text-white bg-danger mb-3 dataCards">
-                  <div className="card-header"> Deaths </div>
+                  <div className="card-header text-center font-italic"> Deaths </div>
                   <div className="card-body">
-                    <p className="card-text"> {this.state.world && this.state.world.Global.TotalDeaths} </p>
+                    <p className="card-text text-center"> {this.state.world && this.state.world.Global.TotalDeaths} </p>
                   </div>
                 </div>
               </div>
               <div className="col-sm-4">
                 <div className="card text-white bg-success mb-3 dataCards">
-                  <div className="card-header"> Recovered </div>
+                  <div className="card-header text-center font-italic"> Recovered </div>
                   <div className="card-body">
-                    <p className="card-text"> {this.state.world && this.state.world.Global.TotalRecovered} </p>
+                    <p className="card-text text-center"> {this.state.world && this.state.world.Global.TotalRecovered} </p>
                   </div>
                 </div>
               </div>
