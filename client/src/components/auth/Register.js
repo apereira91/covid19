@@ -52,8 +52,8 @@ class Register extends Component {
 
     return (
       <div className="text-center">
-        <h1 class="h3 mb-3 font-weight-normal">Register</h1>
-        <p>Already have an account? <Link to="/login">Log in</Link></p>
+        <h1 class="h3 mb-3 font-weight-normal text-white">Register</h1>
+        <p className="text-white">Already have an account? <Link to="/login">Log in</Link></p>
             <form noValidate onSubmit={this.onSubmit} className="form-signin">
                 <input
                   onChange={this.onChange}
