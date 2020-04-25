@@ -18,4 +18,7 @@ Who will be responsible for each part of deliverable #1
 04 Tasks - Jack
 05 Screenshot - Raymond
 
+Powerpoint Presentation - https://docs.google.com/presentation/d/10fu5JO7aV2Un_P0pMo2tgNlPLa7HLg55bFvBC66BeX4/edit?ts=5ea42d39#slide=id.g25f6af9dd6_0_0
+
+Heroku Link - https://finalproject19.herokuapp.com/login
 
