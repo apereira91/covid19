@@ -65,10 +65,10 @@ class infectedButton extends React.Component {
                 const lastFilterArray = [...uniqueSetTwo];
                 console.log(lastFilterArray);
                 for (let t = 0; t < lastFilterArray.length; t++) {
-
+            
                 }
 
-
+            
 
                 // for (let i = 0; i < otherUserChecks.length; i++) {
                 //     for (let v = 0; v < infectedUserChecks.length; v++) {
@@ -86,7 +86,7 @@ class infectedButton extends React.Component {
     render() {
         return (
             <div>
-                <button type="button" className="btn btn-primary" onClick={this.handleInfected}>CHECK-IN</button>
+                <button type="button" className="btn btn-primary" onClick={this.handleInfected}>INFECTED</button>
             </div>
         );
     }

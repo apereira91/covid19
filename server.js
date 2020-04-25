@@ -6,6 +6,26 @@ const PORT = process.env.PORT || 3001;
 const bodyParser = require("body-parser")
 const path = require("path");
 const routes = require("./routes");
+const nodemailer = require("nodemailer");
+const creds = require("./config/email");
+
+var transport = {
+  host: 'smtp.gmail.com',
+  auth: {
+    user: creds.USER,
+    pass: creds.PASS
+  }
+}
+
+var transporter = nodemailer.createTransport(transport)
+
+transporter.verify((error, success) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("All works fine!");
+  }
+});
 
 app.use(
   bodyParser.urlencoded({
