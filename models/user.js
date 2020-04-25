@@ -15,8 +15,12 @@ const UserSchema = new Schema({
     type: Date, 
     default: Date.now
   },
+  infected: {
+    type: Boolean,
+    default: false
+  },
   checks: [
-    {type: mongoose.Schema.Types.ObjectId, ref:'Check'}
+    {type: Schema.Types.ObjectId, ref:'Check'}
   ]
 });
 

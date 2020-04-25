@@ -6,6 +6,7 @@ import "./dashboard.css";
 import Navbar from "../dropdown";
 import axios from "axios";
 import CheckInButton from "./checkInButton";
+import InfectedButton from "./infectedButton";
 
 
 class Dashboard extends Component {
@@ -38,6 +39,7 @@ class Dashboard extends Component {
                 <span style={{ fontFamily: "monospace" }}>CORONAVIRUS</span> tracker 👏
               </p>
             </h4>
+            <InfectedButton {...user}/>
             <CheckInButton {...user}/>
             <br></br>
             <div className="row">

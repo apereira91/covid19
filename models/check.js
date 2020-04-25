@@ -13,7 +13,10 @@ const checkSchema = new mongoose.Schema({
     },
     date: {
         type: Date,
-        default: Date.now
+        default: Date.now()
+    },
+    email: {
+        type: String
     }
 });
 
