@@ -54,8 +54,8 @@ class Login extends Component {
 
     return (
      <div className="text-center">
-       <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
-        <p>Don't have an account? <Link to="/register">Register</Link></p>
+       <h1 class="h3 mb-3 font-weight-normal text-white">Sign In</h1>
+        <p className="text-white">Don't have an account? <Link to="/register">Register</Link></p>
             <form noValidate onSubmit={this.onSubmit} className="form-signin">
                 <input
                   onChange={this.onChange}
